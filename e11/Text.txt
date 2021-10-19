@@ -1,0 +1,19 @@
+countFrequency(string s)
+	create buckets that hold int values
+		each bucket has an imaginary letter assigned to it so bucket 0 is 'a' and bucket 1 is 'b' and so on...
+
+	count = 0
+
+	for each letter in the string
+		if(bucket in charge of the current letter in the string is empty)
+			insert the value 1 in the bucket
+		else
+			count = the first value in the bucket in charge of the current letter in the string
+			clear the bucket from the value it hould
+			count++
+			insert the value of the count in the bucket in charge of the current letter in the string
+			count = 0
+
+	for each bucket in the buckets
+		if (bucket's size != 0)
+			print letter of the bucket by using the displacement of the ascii value which is 97 + ": " + the first value the current bucket holds 
